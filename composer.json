@@ -1,0 +1,15 @@
+{
+    "name": "antron/anthem",
+    "require": {
+        "maatwebsite/excel": "~3.1"
+    },
+    "autoload": {
+        "classmap": [
+            "src"
+        ],
+        "psr-4": {
+            "Antron\\Anthem\\": "src/"
+        }
+    }
+
+}
