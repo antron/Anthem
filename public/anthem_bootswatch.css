@@ -1,0 +1,23 @@
+table.table-anthem th {
+    background-color: #ecf0f1;
+}
+
+div.form-group {
+    margin-bottom: 2em;
+}
+
+div.card {
+    margin-bottom: 2em;
+}
+
+ul.ul_buttons {
+    list-style-type: none;
+    margin-left: 0em;
+    padding-left: 0em;
+    margin-bottom: 0em;
+}
+
+ul.ul_buttons li {
+    display: inline;
+    padding-right: 1em;
+}
