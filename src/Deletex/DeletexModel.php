@@ -1,18 +1,7 @@
 <?php
 
-/**
- * ライブラリ：削除モーダル.
- */
+namespace Antron\Anthem\Deletex;
 
-namespace App\Lib;
-
-/**
- * ライブラリ：削除モーダル.
- *
- * @version 0.0.0 2020-04-27
-
-
- */
 class DeletexModel
 {
 

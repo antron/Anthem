@@ -1,8 +1,5 @@
 <?php
 
-/**
- */
-
 namespace Antron\Anthem;
 
 class Anthem
