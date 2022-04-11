@@ -13,23 +13,32 @@ class Sortobj
     public $objects;
 
     /**
+     * 降順フラグ.
+     * 降順ならtrue、デフォルトはtrue
+     *
+     * @var boolean
+     */
+    private $order_desc;
+
+    /**
      * ソート対象となる値.
      *
      * @var var
      */
     private $values;
-    private $order;
 
     /**
      * コンストラクタ.
+     * 
+     * @param boolean $order_desc 降順フラグ
      */
-    public function __construct($order = 'DESC')
+    public function __construct($order_desc = true)
     {
         $this->objects = [];
 
-        $this->values = [];
+        $this->order_desc = $order_desc;
 
-        $this->order = $order;
+        $this->values = [];
     }
 
     /**
@@ -61,7 +70,7 @@ class Sortobj
 
         $objects = [];
 
-        if ($this->order == 'DESC') {
+        if ($this->order_desc) {
             arsort($this->values);
         } else {
             asort($this->values);
