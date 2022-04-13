@@ -87,6 +87,14 @@ class Sortobj
     {
         return $this->ranks[$id];
     }
+    
+    public function ranked(){
+
+        $this->sortByOrder();
+
+        $this->ranks[$key] = self::ranking($this->values);
+        
+    }
 
     public function get($max = 100000)
     {
