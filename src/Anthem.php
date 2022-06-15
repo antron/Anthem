@@ -6,6 +6,21 @@ class Anthem
 {
 
     /**
+     * トリム拡張.
+     * 
+     * @param string $string_1 対象文字列
+     * @return string トリム後の文字列
+     */
+    public static function trim($string_1)
+    {
+        $string_2 = str_replace('　', ' ', $string_1);
+
+        $string = trim($string_2);
+
+        return $string;
+    }
+
+    /**
      * Excelの内容を配列化.
      * 
      * @param string $filepath ファイルパス

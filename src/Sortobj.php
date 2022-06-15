@@ -21,12 +21,18 @@ class Sortobj
     private $order_desc;
 
     /**
+     * 順位用の配列
+     *
+     * @var array
+     */
+    private $ranks;
+
+    /**
      * ソート対象となる値.
      *
      * @var var
      */
     private $values;
-    private $ranks;
 
     /**
      * コンストラクタ.
@@ -67,7 +73,7 @@ class Sortobj
 
         $this->sortByOrder();
 
-        $this->ranks[$key] = self::ranking($this->values);
+        $this->ranks = self::ranking($this->values);
 
         return $this->get($max);
     }
@@ -87,13 +93,13 @@ class Sortobj
     {
         return $this->ranks[$id];
     }
-    
-    public function ranked(){
+
+    public function ranked()
+    {
 
         $this->sortByOrder();
 
-        $this->ranks[$key] = self::ranking($this->values);
-        
+        $this->ranks = self::ranking($this->values);
     }
 
     public function get($max = 100000)
@@ -135,6 +141,8 @@ class Sortobj
         $value_former = 0;
 
         $ranks = [];
+
+        arsort($values);
 
         foreach ($values as $id => $value) {
 
